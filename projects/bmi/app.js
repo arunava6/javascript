@@ -20,7 +20,7 @@ form.addEventListener('submit',function(e){
             conclusion.innerHTML=`Normal Range`
         }
     }
-})
+}) 
 
 
 
