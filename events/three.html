@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Good Evening!</h1>
+    <button id="start">Start</button>
+    <button id ="stop">Stop</button>
+</body>
+<script>
+    const timeStart=function(){
+        console.log("Good night!",Date.now());
+    }
+    let timeStop=null;
+    document.getElementById("start").addEventListener('click',function(){
+        if(timeStop===null){
+            timeStop=setInterval(timeStart,2500);
+        }
+    })
+    document.getElementById("stop").addEventListener('click',function(){
+        if(timeStop!==null){
+            clearInterval(timeStop);
+            timeStop=null;
+        }
+    })
+</script>
+</html>
